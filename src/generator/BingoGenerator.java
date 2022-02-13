@@ -21,4 +21,5 @@ Catch a shiny
 Stun {pokemon or number of poekemon}
 spell {word}
 fight {character}
+Refight Noble
  */
