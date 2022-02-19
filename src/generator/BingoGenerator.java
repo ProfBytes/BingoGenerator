@@ -191,7 +191,7 @@ public class BingoGenerator {
 	}
 	
 	public static String generateWord() {
-		return "Sepll a "+(rand.nextInt(3)+4)+" letter word";
+		return "Spell a "+(rand.nextInt(3)+4)+" letter word";
 	}
 	
 	public static String generateRefights() {
