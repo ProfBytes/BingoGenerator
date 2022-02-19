@@ -183,7 +183,11 @@ public class BingoGenerator {
 	}
 	
 	public static String generateCraftable() {
-		return "Craft "+generateNumber()+" "+craftables.get(rand.nextInt(craftables.size()));
+		String item = craftables.get(rand.nextInt(craftables.size()));
+		if(item.equals("Star Piece")){
+			return "Craft 1 "+item;
+		}
+		return "Craft "+generateNumber()+" "+item;
 	}
 	
 	public static String generateWord() {
