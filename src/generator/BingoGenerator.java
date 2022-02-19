@@ -138,7 +138,7 @@ public class BingoGenerator {
 	
 	public static String generateSpecificPokemon() {
 		String poke = pokemon.get(rand.nextInt(pokemon.size()));
-		while(dontGenerate.contains(poke)&&rarePokemon.contains(poke)) {
+		while(dontGenerate.contains(poke)||rarePokemon.contains(poke)) {
 			poke = pokemon.get(rand.nextInt(pokemon.size()));
 		}
 		return "Catch/Evolve "+generateNumber()+" "+poke;
