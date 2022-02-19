@@ -92,7 +92,16 @@ public class BingoGenerator {
 				generateTask("dig", tasks);
 			}
 		}
-		System.out.println(tasks.toString());
+		
+		generateJson(tasks);
+	}
+	
+	public static void generateJson(List<String> tasks) {
+		System.out.print("[");
+		for(int i = 0; i<tasks.size()-1;i++) {
+			System.out.println("{\"name\": \""+tasks.get(i)+"\"},");
+		}
+		System.out.println("{\"name\": \""+tasks.get(tasks.size()-1)+"\"} ]");
 	}
 	
 	public static void generateTask(String typeOfTask, List<String> tasks) {
@@ -120,7 +129,7 @@ public class BingoGenerator {
 			}
 		}
 
-		
+		tasks.add(toAdd);
 	}
 	
 	public static String generateRarePokemon() {
