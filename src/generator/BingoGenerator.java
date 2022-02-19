@@ -74,8 +74,6 @@ public class BingoGenerator {
 		
 		while(tasks.size()<50) {
 			int i = rand.nextInt(100);
-			System.out.println("Generate task "+tasks.size());
-			System.out.println(i);
 			if(i<30) {
 				generateTask("specific", tasks);
 			}else if(i<40) {
@@ -121,7 +119,8 @@ public class BingoGenerator {
 				toAdd = generateDiggable();
 			}
 		}
-		tasks.add(toAdd);
+
+		
 	}
 	
 	public static String generateRarePokemon() {
